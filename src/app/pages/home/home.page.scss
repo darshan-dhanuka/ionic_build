@@ -1,0 +1,39 @@
+
+ion-content.ionic-home-page-section {
+    height: 100vh;
+    .back-img{
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-bottom: 20px;
+        background: url('../../../assets/images/bg.png') ;
+        .opacity-0{
+            position: relative;
+            z-index: 2;
+        }      
+        &:after {
+            content: "";
+            display: block;
+            position: fixed;
+            padding: 100px 0;
+            width: 100%;
+            height: 100%;
+            top: 10px;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        .block{
+            margin: 40px auto;
+            display: block;
+            height: auto;
+            width: 80%;
+            ion-item{
+                margin: 14px auto;
+                --background:#1b1b1b;
+            }
+        }
+    }
+}

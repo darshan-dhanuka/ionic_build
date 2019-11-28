@@ -1,0 +1,25 @@
+<h2 (click)="toggleAccordion(name)" *ngIf="name != 'WATCH'">
+  <span class=" icon"><img alt="icon" src="../../../assets/images/home/black/{{icon}}" width="80%"></span>
+  {{ name }}
+  <span *ngIf="name != 'WATCH'">
+    <span class="arrow-icon" *ngIf="isMenuOpen">&#9650;</span>
+    <span class="arrow-icon" *ngIf="!isMenuOpen">&#9660;</span>
+  </span>
+</h2>
+<h2 *ngIf="name === 'WATCH'" (click)="openWatchPage()">
+  <span class=" icon"><img alt="icon" src="../../../assets/images/home/black/{{icon}}" width="80%"></span>
+  {{ name }}
+  <span *ngIf="name != 'WATCH'">
+    <span class="arrow-icon" *ngIf="isMenuOpen">&#9650;</span>
+    <span class="arrow-icon" *ngIf="!isMenuOpen">&#9660;</span>
+  </span>
+</h2>
+<div [ngClass]="isMenuOpen ? 'active' : 'inactive'" *ngIf="name != 'WATCH'">
+  <ion-row justify-content-center>
+    <p>{{ description }}</p>
+  </ion-row>
+  <ion-row justify-content-center>
+    <ion-button type="button" color="default" size="small" class="text-uppercase" (click)="broadcastName(name)">ENTER
+    </ion-button>
+  </ion-row>
+</div>

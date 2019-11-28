@@ -1,0 +1,119 @@
+<ion-content class="ionic-page-section">
+  <form [formGroup]="registerForm">
+    <div class="opacity-0">
+      <ion-grid>
+        <ion-row color="primary" justify-content-center>
+          <ion-col center align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center class="logo">
+              <img src="../../assets/images/logo.png" alt="logo" width="40%">
+            </div>
+            <div padding>
+              <ion-item lines="none" color="transparent" class="bg-transparent-white">
+                <ion-label class="m-0">
+                  <ion-icon class="text-success font-s-28" name="contact"></ion-icon>
+                </ion-label>
+                <ion-input color="transparent" class="bg-transparent text-white m-l-1" name="name" type="text"
+                  placeholder="Full name" formControlName="name"></ion-input>
+              </ion-item>
+              <div *ngFor="let validation of validationMessages.name">
+                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                  <div class="error-message text-red " *ngIf="f.name.errors[validation.type]">
+                    {{ validation.message }}</div>
+                </div>
+              </div>
+
+              <ion-item lines="none" color="transparent" class="m-t-20 bg-transparent-white">
+                <ion-label class="m-0">
+                  <ion-icon class="text-success font-s-28" name="person"></ion-icon>
+                </ion-label>
+                <ion-input color="transparent" class="bg-transparent text-white m-l-1" name="uname" type="text"
+                  placeholder="User Name" formControlName="uname"></ion-input>
+              </ion-item>
+              <div *ngFor="let validation of validationMessages.uname">
+                <div *ngIf="submitted && f.uname.errors" class="invalid-feedback">
+                  <div class="error-message text-red " *ngIf="f.uname.errors[validation.type]">
+                    {{ validation.message }}</div>
+                </div>
+              </div>
+
+              <ion-item lines="none" color="transparent" class="m-t-20 bg-transparent-white">
+                <ion-label class="m-0">
+                  <ion-icon class="text-success font-s-28" name="mail"></ion-icon>
+                </ion-label>
+                <ion-input color="transparent" class="bg-transparent text-white m-l-1" name="email" type="text"
+                  placeholder="Email" formControlName="email"></ion-input>
+              </ion-item>
+              <div *ngFor="let validation of validationMessages.email">
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                  <div class="error-message text-red " *ngIf="f.email.errors[validation.type]">
+                    {{ validation.message }}</div>
+                </div>
+              </div>
+
+              <ion-item lines="none" color="transparent" class="m-t-20 bg-transparent-white">
+                <ion-label class="m-0">
+                  <ion-icon class="text-success font-s-28" name="lock"></ion-icon>
+                </ion-label>
+                <ion-input color="transparent" class="bg-transparent text-white m-l-1" name="password" type="password"
+                  placeholder="Password" formControlName="password">
+                </ion-input>
+              </ion-item>
+              <div *ngFor="let validation of validationMessages.password">
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div class="error-message text-red " *ngIf="f.password.errors[validation.type]">
+                    {{ validation.message }}</div>
+                </div>
+              </div>
+
+              <ion-item lines="none" color="transparent" class="m-t-20 bg-transparent-white">
+                <ion-label class="m-0">
+                  <ion-icon class="text-success font-s-28" name="phone-portrait"></ion-icon>
+                </ion-label>
+                <ion-input color="transparent" class="bg-transparent text-white m-l-1" name="phone" type="text"
+                  placeholder="Mobile" formControlName="phone">
+                </ion-input>
+                <ion-button class="m-0 send-otp" (click)="sendOtp()">
+                  <a class="text-green text-decoration-none">Send OTP</a>
+                </ion-button>
+              </ion-item>
+              <div *ngFor="let validation of validationMessages.phone">
+                <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                  <div class="error-message text-red " *ngIf="f.phone.errors[validation.type]">
+                    {{ validation.message }}</div>
+                </div>
+              </div>
+            </div>
+            <ion-text color="light">
+              <div class="agree" text-center>
+                <ion-checkbox mode="md" name="agree" formControlName="agree"></ion-checkbox> I agree to the Terms of
+                Use
+                & I am above 18 years.
+              </div>
+              <div *ngFor="let validation of validationMessages.agree">
+                <div *ngIf="submitted && f.agree.errors" class="invalid-feedback">
+                  <div class="error-message text-red " *ngIf="f.agree.errors[validation.type]">
+                    {{ validation.message }}</div>
+                </div>
+              </div>
+            </ion-text>
+
+            <div class="register-button-section m-t-20">
+              <ion-button size="default" type="submit" (click)="submitRegister(registerForm)" color="green"
+                class="m-b-1 round-5" shape="round" expand="full">
+                Submit
+              </ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-text color="light">
+        <div text-center>
+          <a class="text-green text-decoration-none" href="javascript:void(0)" [routerLink]="['/']"> Back to Login </a>
+        </div>
+      </ion-text>
+      <div class="footer-login">
+        <div class="title">version: 1</div>
+      </div>
+    </div>
+  </form>
+</ion-content>

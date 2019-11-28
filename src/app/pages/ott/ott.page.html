@@ -1,0 +1,114 @@
+<ion-content class="ionic-ott-page-section">
+  <div class="back-img">
+    <app-header></app-header>
+    <div class="opacity-0">
+      <ion-grid no-padding>
+        <ion-row no-padding class="ott-banner" justify-content-center>
+          <div no-padding class="image-box">
+            <div no-padding class="image-box__background"
+              style="--image-url: url('../../assets/images/ott/banner.png')"></div>
+            <div no-padding class="image-box__overlay"></div>
+            <div no-padding class="image-box__content">
+              <ion-row class="m-t-1">
+                <ion-col size="9" class="line-h-3 text-italic text-uppercase text-s-12">
+                  Lorem Ipsum dolor sit amet
+                </ion-col>
+                <ion-col size="3">
+                  <ion-button size="small" expand="full" class="bg-red">Live</ion-button>
+                </ion-col>
+              </ion-row>
+              <ion-row class="banner-search">
+                <ion-col size="9" class="text-uppercase text-s-12">
+                  <div class="searchContainer">
+                    <ion-input class="searchBox" type="search" name="search" placeholder="Search..."></ion-input>
+                    <ion-button type="submit" class="searchButton">
+                      <ion-icon name="search"></ion-icon>
+                    </ion-button>
+                  </div>
+                </ion-col>
+                <ion-col size="3" class="my-list">
+                  MyList<ion-icon name="add"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </div>
+          </div>
+        </ion-row>
+      </ion-grid>
+      <ion-grid no-padding>
+        <div no-padding class="ott-section" justify-content-start>
+          <div padding="4" class="text-success event-title">
+            Events
+          </div>
+          <ion-row class="event-row">
+            <ion-col size="4">
+              <img src="../../../assets/images/ott/event1.png" width="100%">
+              Title1
+            </ion-col>
+            <ion-col size="4">
+              <img src="../../../assets/images/ott/event2.png" width="100%">
+              Title1
+            </ion-col>
+            <ion-col size="4">
+              <img src="../../../assets/images/ott/event3.png" width="100%">
+              Title1
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-grid>
+      <ion-grid no-padding>
+        <div no-padding class="ott-section" justify-content-start>
+          <div padding="4" class="text-success event-title">
+            Upcimming Events
+          </div>
+          <ion-row class="event-row">
+            <ion-col size="4">
+              <img src="../../../assets/images/ott/event1.png" width="100%">
+              Title1
+            </ion-col>
+            <ion-col size="4">
+              <img src="../../../assets/images/ott/event2.png" width="100%">
+              Title1
+            </ion-col>
+            <ion-col size="4">
+              <img src="../../../assets/images/ott/event3.png" width="100%">
+              Title1
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-grid>
+      <ion-grid no-padding>
+        <div no-padding class="ott-section" justify-content-start>
+          <div padding="4" class="text-success event-title">
+            Episodes
+          </div>
+          <ion-row class="event-row">
+            <ion-col size="4">
+              <a [routerLink]="['/ott-single']" href="javascript:void(0)">
+                <img src="../../../assets/images/ott/play-button.jpg" height="25%" width="25%" class="play-btn"
+                  alt="play-buttton">
+                <img src="../../../assets/images/ott/event1.png">
+              </a>
+              Title1
+            </ion-col>
+            <ion-col size="4">
+              <a [routerLink]="['/ott-single']" href="javascript:void(0)"><img
+                  src="../../../assets/images/ott/play-button.jpg" height="25%" width="25%" class="play-btn"
+                  alt="play-buttton">
+                <img src="../../../assets/images/ott/event2.png">
+              </a>
+              Title2
+            </ion-col>
+            <ion-col size="4">
+              <a [routerLink]="['/ott-single']" href="javascript:void(0)"><img
+                  src="../../../assets/images/ott/play-button.jpg" height="25%" width="25%" class="play-btn"
+                  alt="play-buttton">
+                <img src="../../../assets/images/ott/event3.png">
+              </a>
+              Title3
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

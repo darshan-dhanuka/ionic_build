@@ -1,0 +1,12 @@
+export const LOGIN = "login_demo";
+export const SOCIAL_APP = "socialapp";
+export const REGISTER = "register_demo"
+export const SEND_OTP = "send_otp_demo"
+export const VERIFY_OTP = "verify_otp_demo"
+export const HOMETAB = "tab";
+export const HOMENEWS = "home_news";
+export const NEWS = "news";
+export const FORUM = "forum";
+export const FORUMDISCUSSION = "forum/detail";
+export const FORUM_CREATE = "forum/create";
+export const GET_PROFILE = "user_det";

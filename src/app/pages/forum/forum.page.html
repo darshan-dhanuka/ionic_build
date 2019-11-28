@@ -1,0 +1,59 @@
+<ion-content class="ionic-home-page-section">
+  <div class="back-img">
+    <app-header></app-header>
+    <div class="opacity-0">
+      <ion-grid no-padding>
+        <ion-row class="top-header-forum" justify-content-center>
+          Forum
+        </ion-row>
+      </ion-grid>
+      <div class="forum">
+        <ion-grid no-padding>
+          <ion-row no-padding>
+            <ion-col size="1" class="" no-padding>
+              <div class="text-center forum-header border-radius-top-right-0">
+                #
+              </div>
+            </ion-col>
+            <ion-col size="11" class="" no-padding>
+              <div class="forum-header border-radius-top-left-0">
+                Topic
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-list>
+            <div *ngFor="let item of forumData;let i =index">
+              <ion-row no-padding (click)="forumDiscussion(item.topicId)">
+                <ion-col size="1" class="" no-padding>
+                  <div class="hash-background text-center forum-tr">
+                    {{(i + 1)}}
+                  </div>
+                </ion-col>
+                <ion-col size="7" class="bg-trans-white margin-t-b-1 padding-2" no-padding>
+                  <div class="forum-tr text-white">
+                    {{item.topic}}
+                  </div>
+                </ion-col>
+                <ion-col size="2" class="bg-trans-white margin-t-b-1 padding-2" no-padding>
+                  <div class="forum-tr text-white">
+                    by <span class="text-green">Admin</span>
+                  </div>
+                </ion-col>
+                <ion-col size="2" class="bg-trans-white margin-t-b-1 padding-2" no-padding>
+                  <div class="forum-tr tr-last">
+                    <ion-badge color="light" class="text-green">11</ion-badge>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-list>
+          <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+            <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+            </ion-infinite-scroll-content>
+          </ion-infinite-scroll>
+        </ion-grid>
+      </div>
+    </div>
+  </div>
+</ion-content>

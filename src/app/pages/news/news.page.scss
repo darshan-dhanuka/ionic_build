@@ -1,0 +1,58 @@
+ion-content.ionic-home-page-section {
+    height: 100vh;
+    .back-img{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        background: url('../../../assets/images/bg.png') center center no-repeat;
+        background-size: cover;
+        .opacity-0{
+            margin: 35px auto;
+            position: relative;
+            z-index: 2;
+        }      
+        &:after {
+            content: "";
+            display: block;
+            position: fixed;
+            padding: 100px 0;
+            width: 100%;
+            height: 100%;
+            top: 10px;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        .top-header-news{
+            padding: 6px;
+            color: #FFF;
+            font-size: 14px;
+            background-color: #00997a;
+        }
+        .banner-news{
+            width: 100%;
+        }
+        .position-fixed{
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+        }
+        .margin-small{
+            margin: 5px !important;
+            --background:transparent;
+        }
+        .card-title{
+            color: #FFF;
+            font-weight: normal !important;
+            border-bottom: 1px solid #00997a;
+        }
+        .card-description{
+            margin: 10px auto;
+            color: #FFF;
+            font-size: 13px;
+        }
+        .bg-white-trans{
+            padding:3px;
+            background: #ffffff17 !important;
+        }
+    }
+}

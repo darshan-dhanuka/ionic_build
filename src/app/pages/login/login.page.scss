@@ -1,0 +1,57 @@
+.logo{
+    margin: 60px auto 10px auto;
+}
+ion-content.ionic-page-section {
+    height: 100vh;
+    form{
+        width: 100%;
+        height: 110vh;
+        position: relative;
+        background: url('../../../assets/images/bg.png') center center no-repeat;
+        background-size: cover;
+        .opacity-0{
+            position: relative;
+            z-index: 2;
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: fixed;
+            padding: 100px 0;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        .login-button-section {
+            padding: 0 40px;
+        }
+        .register-forgot-link a{
+            font-size: 18px;
+            text-decoration: none;
+            color: #FFF !important;
+        }
+        ion-checkbox {
+            --size:14px;
+            --background:transparent;
+            --background-checked:#00997a;
+            --border-color:#FFF;
+        }
+        .overly{
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background-color: cyan;
+            border-radius: 50%;
+        }
+    }
+}
+.footer-login{
+    z-index: 1;
+    padding: 5px;
+    margin: 45px auto;
+    text-align: center;
+    color: #ffffff5e;
+    font-size: 14px;
+}

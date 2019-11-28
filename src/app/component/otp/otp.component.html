@@ -1,0 +1,32 @@
+<div class="text-uppercase text-center top-header">
+  <div class="title">verify OTP</div>
+</div>
+<ion-grid>
+  <form [formGroup]="otpForm">
+    <ion-row justify-content-center>
+      <ion-col size="8" no-padding no-margin>
+        <ion-input class="input-otp" type="text" placeholder="OTP" formControlName="otp_text"></ion-input>
+      </ion-col>
+      <div *ngFor="let validation of validationMessages.otp_text">
+        <div *ngIf="submitted && f.otp_text.errors" class="invalid-feedback">
+          <div class="error-message text-red " *ngIf="f.otp_text.errors[validation.type]">
+            {{ validation.message }}</div>
+        </div>
+      </div>
+    </ion-row>
+    <ion-row no-padding no-margin justify-content-center>
+      <ion-col size="8" no-padding no-margin>
+        <ion-button (click)="submitOtp(otpForm)" size="default" color="green" class="text-uppercase" expand="full">
+          Send
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <ion-row justify-content-center>
+    <ion-col text-center size="8">
+      <ion-text class="resend-otp text-uppercase text-success">
+        <a (click)="sendOtp()" class="text-dacoration-none text-success">Resend OTP</a>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+</ion-grid>

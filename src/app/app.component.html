@@ -1,0 +1,51 @@
+<ion-app>
+  <ion-menu side="end" type="overlay" menuId="sidemenu" contentId="content1">
+    <ion-header>
+      <ion-toolbar class="new-background-color p-40">
+        <ion-row justify-content-center class="mb-6">
+          <img style="border-radius: 50%;" [src]="getImageUrl(loginUser?.profile)" width="30%">
+        </ion-row>
+        <ion-text color="light">
+          <div text-center>
+            {{loginUser?.fullName}}
+            <p class="text-darkgreen m-4 text-italic">New York</p>
+          </div>
+        </ion-text>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-content">
+      <div class="opacity-0">
+        <ion-list class="mt-34 ion-list background-transparent">
+          <ion-item (click)="menuClose()" class="ion-item" [routerLink]="['/home/tabs/home']">
+            <ion-icon name="home"></ion-icon>&nbsp;&nbsp;Home
+          </ion-item>
+          <ion-item (click)="menuClose()" class="ion-item" [routerLink]="['/profile']">
+            <ion-icon name="person"></ion-icon>&nbsp;&nbsp;My Profile
+          </ion-item>
+          <ion-item (click)="menuClose()" class="ion-item" [routerLink]="['/']">
+            <ion-icon name="log-out"></ion-icon>&nbsp;&nbsp;Account
+          </ion-item>
+          <ion-item (click)="menuClose()" class="ion-item" [routerLink]="['/subcription']">
+            <ion-icon name="logo-rss"></ion-icon>&nbsp;&nbsp;Subscription
+          </ion-item>
+          <ion-item (click)="menuClose()" class="ion-item" [routerLink]="['/chatbot']">
+            <ion-icon name="chatbubbles"></ion-icon>&nbsp;&nbsp;Chat Now
+          </ion-item>
+          <ion-item (click)="menuClose()" class="ion-item" [routerLink]="['/news']">
+            <ion-icon name="notifications-outline"></ion-icon>&nbsp;&nbsp;News
+          </ion-item>
+          <ion-item (click)="menuClose()" class="ion-item" [routerLink]="['/forum']">
+            <ion-icon name="information-circle"></ion-icon>&nbsp;&nbsp;Forum
+          </ion-item>
+          <ion-item (click)="menuClose()" class="ion-item" [routerLink]="['/ott']">
+            <ion-icon name="information-circle"></ion-icon>&nbsp;&nbsp;Watch
+          </ion-item>
+          <ion-item (click)="menuClose()" class="ion-item" (click)="doLogOut()">
+            <ion-icon name="power"></ion-icon>&nbsp;&nbsp;Logout
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content1"></ion-router-outlet>
+</ion-app>

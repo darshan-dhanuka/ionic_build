@@ -1,0 +1,75 @@
+<ion-content class="ionic-page-section">
+  <form [formGroup]="loginForm">
+    <div class="opacity-0">
+      <ion-grid>
+        <ion-row color="primary" justify-content-center>
+          <ion-col center align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center class="logo">
+              <img src="../../assets/images/logo.png" alt="logo" width="40%">
+            </div>
+            <div padding>
+              <ion-item lines="none" color="transparent" class="bg-transparent-white">
+                <ion-label class="m-0">
+                  <ion-icon class="text-success font-s-28" name="person"></ion-icon>
+                </ion-label>
+                <ion-input color="transparent" class="bg-transparent text-white m-l-1" name="email" type="email"
+                  placeholder="Email" formControlName="email"></ion-input>
+              </ion-item>
+              <div *ngFor="let validation of validationMessages.email">
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                  <div class="error-message text-red " *ngIf="f.email.errors[validation.type]">{{ validation.message }}
+                  </div>
+                </div>
+              </div>
+              <ion-item lines="none" color="transparent" class="m-t-20 bg-transparent-white">
+                <ion-label class="m-0">
+                  <ion-icon class="text-success font-s-28" name="lock"></ion-icon>
+                </ion-label>
+                <ion-input color="transparent" class="bg-transparent text-white m-l-1" name="password" type="password"
+                  placeholder="Password" formControlName="password">
+                </ion-input>
+              </ion-item>
+              <div *ngFor="let validation of validationMessages.password">
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div class="error-message text-red " *ngIf="f.password.errors[validation.type]">
+                    {{ validation.message }}</div>
+                </div>
+              </div>
+            </div>
+            <ion-text color="light">
+              <div text-center>
+                <ion-checkbox name="remember"></ion-checkbox> Remember me
+              </div>
+            </ion-text>
+            <div class="login-button-section">
+              <ion-button size="default" type="submit" color="green" class="m-b-1 uppercase" shape="round"
+                (click)="submitLogin(loginForm)" expand="full">
+                Login
+              </ion-button>
+              <ion-button size="default" type="button" color="facebook" class="m-b-1" shape="round" expand="full"
+                (click)="loginWithFacebook()">
+                <i class="fab fa-facebook-square"></i>&nbsp;
+                Login With Facebook
+              </ion-button>
+              <ion-button size="default" type="button" color="google" class="m-b-1" shape="round" expand="full"
+                (click)="doGoogleLogin()">
+                <i class="fab fa-google-plus-g"></i>&nbsp;
+                Login With Google
+              </ion-button>
+            </div>
+            <ion-text color="light" text-center>
+              <h5 class="register-forgot-link">
+                <a [routerLink]="['/register']">Register</a> |
+                <a>Forgot password</a>
+              </h5>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div class="footer-login">
+        <div class="title">version: 1</div>
+      </div>
+    </div>
+  </form>
+
+</ion-content>

@@ -1,0 +1,189 @@
+.line-h-3 {
+    line-height: 3;
+}
+.bg-red{
+    --background: #d00707;
+}
+ion-content.ionic-ott-page-section {
+    height: auto;
+    .back-img{
+        width: 100%;
+        height: auto;
+        position: relative;
+        background: url('../../../assets/images/bg.png') center center no-repeat;
+        background-size: cover;
+        padding-bottom: 50px;
+        .opacity-0{
+            position: relative;
+            z-index: 2;
+            .ott-banner{
+                .image-box {
+                    width: 100%;
+                    background: #0f0f0d;
+                }
+                .image-box__overlay {
+                    height: 110px;
+                    position: absolute;
+                    left: 0;
+                    top: -110px;
+                    right: 0;
+                    bottom: 0;
+                }
+                .image-box__background {
+                    height: 260px;
+                    position: absolute;
+                    left: 0;
+                    top: -110px;
+                    right: 0;
+                    bottom: 0;
+                }
+                .image-box__background {
+                    background: var(--image-url) center center no-repeat;
+                    background-size: cover;
+                    z-index: 1;
+                    position: absolute;
+                    height: 260px;
+                    top: -130px;
+                    left: -42%;
+                }
+                .image-box__overlay {
+                    background: rgba(0, 0, 0, 0.5);
+                    z-index: 2;
+                }
+
+                .image-box__content {
+                    position: relative;
+                    z-index: 3;
+                    color: white;
+                    min-height: 160px;
+                    ion-row{
+                        padding: 0 10px;
+                    }
+                    .banner-search{
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        .searchContainer {
+                            width: 100%;
+                            display: inline-flex;
+                            flex: 1 1 300px;
+                            position: relative;
+                            border: 2px solid #52ff6f;
+                            border-radius: 5px;
+                            overflow: hidden;
+                        }
+                        .searchBox {
+                            padding: 2px;
+                            height: 28px;
+                            background: transparent;
+                            flex: 1;
+                            &:focus{
+                                border-color: transparent;;
+                            }
+                        }
+
+                        .searchButton {
+                            margin: 0 -4px;
+                            height: 28px;
+                            border-left: 2px solid #52ff6f;
+                            border-top: 2px solid #52ff6f;
+                            border-bottom: 2px solid #52ff6f;
+                            --background: transparent;
+                            --background-focused:transparent;
+                            --background-activated:transparent;
+                            border: 0;
+                            color: white;
+                            border-radius: 0;
+                            ion-icon{
+                                color:#52ff6f;
+                            }
+                        }
+                        .my-list{
+                            line-height: 2;
+                            text-align: center;
+                            font-size: 14px;
+                            color: #52ff6f;
+                            ion-icon{
+                                font-weight: bold;
+                            }
+                        }
+                    } 
+                }
+            }
+            .ott-section{
+                .event-title{
+                    font-size: 12px;
+                }
+                .event-row{
+                    background: #1e1f3852;
+                    padding: 0 5px;
+                    margin: -10px 15px;
+                    img{
+                        height: 100px;
+                        border: 1px solid #52ff6f;
+                    }
+                    .play-btn{
+                        height: auto;
+                        border: none;
+                        border-radius:4px;
+                        position: absolute;
+                        top: 45px;
+                        left: 42px;
+                    }
+                    ion-col{
+                        font-size: 12px;
+                        color: #FFF;
+                    }
+                }
+            }
+            .ott-section{
+                .ott-video-episodes{
+                    .image-box {
+                    width: 100%;
+                    }
+
+                    .image-box__background,
+                    .image-box__overlay {
+                        height: 180px;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                    }
+                    .image-box__background {
+                        background: var(--image-url) center center no-repeat;
+                        background-size: cover;
+                        z-index: 1;
+                        height: 180px;
+                    }
+                    .image-box__overlay {
+                        background: rgba(0, 0, 0, 0.5);
+                        z-index: 2;
+                    }
+
+                    .image-box__content {
+                        position: relative;
+                        z-index: 3;
+                        color: white;
+                        min-height: 160px;
+                        ion-row{
+                            padding: 0 10px;
+                        }
+                    }
+                }                
+            }
+        }
+    }      
+    &:after {
+        content: "";
+        display: block;
+        position: fixed;
+        padding: 100px 0;
+        width: 100%;
+        height: 100%;
+        top: 10px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}

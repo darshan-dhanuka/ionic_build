@@ -1,0 +1,77 @@
+<ion-content class="ionic-chatbot-page-section">
+  <div class="back-img">
+    <app-header></app-header>
+    <div class="opacity-0">
+      <ion-row class="back-icon">
+        <a href="javascript:void(0)" [routerLink]="['/forum']">
+          <ion-icon name="arrow-back"></ion-icon>
+        </a>
+      </ion-row>
+      <ion-card-header>
+        <ion-card-title color="light">
+          <ion-icon class="text-success" name="chatbubbles"></ion-icon> Forum Discussion
+        </ion-card-title>
+      </ion-card-header>
+      <div class="card-title-description">
+        {{forumTopicDetail?.topic}}
+      </div>
+      <div class="chat-box">
+        <ion-card-content>
+          <div class="chat-body" id="msgContainer" #content>
+            <div #messages class="message-container" *ngFor="let message of comments">
+              <div class="message" [ngClass]="{ 'from': loginUser?.userId != message?.userId,
+              'to': loginUser?.userId == message?.userId}">
+                <ion-row class="display-col-reverse">
+                  <ion-col size="2">
+                    <img alt="userimg" class="user-img" *ngIf="!message?.profile"
+                      src="../../../assets/images/userimg.png">
+                    <img alt="userimg" class="user-img" *ngIf="message?.profile" [src]="getImageUrl(message?.profile)">
+                    <div no-padding class="user-send-time">
+                      <span *ngIf="loginUser?.userId == message?.userId" class="sendtime">{{message?.commentDate | date:
+                        'yyyy-MM-dd HH:mm' }}</span>
+                    </div>
+                  </ion-col>
+                  <ion-col size="10">
+                    <ion-row class="text-align-right" no-padding>
+                      <ion-col no-padding class="text-success">
+                        {{message?.fullName}}
+                      </ion-col>
+                      <ion-col *ngIf="loginUser?.userId != message?.userId" no-padding class="text-success">
+                        <span class="sendtime">{{message?.commentDate | date:
+                          'yyyy-MM-dd HH:mm' }}</span>
+                      </ion-col>
+                    </ion-row>
+                    {{message?.commentDescription}}
+                  </ion-col>
+                </ion-row>
+              </div>
+            </div>
+          </div>
+          <ion-footer no-padding>
+            <ion-grid no-padding>
+              <ion-row no-padding class="bg-white border-2-green">
+                <ion-col size="10" no-padding>
+                  <div class="send-box" no-padding>
+                    <input class="input-text-message" [(ngModel)]="textValue" placeholder="Type here"
+                      (keyup.enter)="sendMessage()" />
+                  </div>
+                </ion-col>
+                <ion-col size="2" no-padding>
+                  <ion-row no-padding justify-content-center>
+                    <ion-button no-padding class="send-btn" size="small" (click)="sendMessage()">
+                      <ion-icon no-padding name="send"></ion-icon>
+                    </ion-button>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row class="attach" no-padding justify-content-end>
+                <ion-icon color="light" name="attach"></ion-icon>
+                <ion-icon color="light" name="image"></ion-icon>
+              </ion-row>
+            </ion-grid>
+          </ion-footer>
+        </ion-card-content>
+      </div>
+    </div>
+  </div>
+</ion-content>

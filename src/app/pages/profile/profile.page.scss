@@ -1,0 +1,197 @@
+ion-content.ionic-home-page-section {
+    height: 100vh;
+    .back-img{
+        width: 100%;
+        height: auto;
+        padding: 0 0 150px 0;
+        position: relative;
+        background: url('../../../assets/images/bg.png') center center no-repeat;
+        background-size: cover;
+        
+        form{
+            z-index: 2;
+            position: relative;
+            .profile-pic {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+            .file-upload {
+                display: none;
+            }
+            .circle {
+                margin: 10px auto;
+                border-radius: 1000px !important;
+                overflow: hidden;
+                width: 110px;
+                height: 110px;
+            }
+            .p-image {
+                position: absolute;
+                right: 118px;
+                top:120px;
+                color: #000;
+                background: #52fe6f;
+                border-radius: 1000px;
+            }
+            .p-image:hover {
+                transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+            }
+            .upload-button {
+                font-size: 18px;
+                padding: 5px;
+            }
+            .upload-button:hover {
+            transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+            color: #999;
+            }
+        }
+        .opacity-0{
+            position: relative;
+            z-index: 2;
+            .profile-header{      
+                display: block;
+                padding: 22px 0;
+                background: rgba(0, 0, 0, 0.5);
+                img{
+                    margin: 0px auto;
+                }
+            }
+            ion-text {
+                p{
+                    margin: 5px auto;
+                }
+            }
+        }      
+        &:after {
+            content: "";
+            display: block;
+            position: fixed;
+            padding: 100px 0;
+            width: 100%;
+            height: 100%;
+            top: 10px;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        ion-segment ion-row{
+            width: 100%;
+        }
+        ion-segment-button{
+            --border:none;
+            --border-color:transparent;
+            --color-checked:#000 !important;
+            --color:#FFF;
+            --border-radius:0;
+            padding: 4px 20px 0px 20px;
+            font-size: 12px;
+            --background:#00000054;
+            --background-activated:#52fe6f;
+            --background-checked:#52fe6f;
+            &:host{
+                --border: none;
+                --border-color: transparent !important;
+                --color-checked: #000 !important;
+            }
+            ion-label{
+                --border: none;
+                --border-color: transparent !important;
+                --color-checked: #000 !important;
+                margin: 0px;
+            }
+        }
+        .container {
+            color: #FFF;
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            /* Hide the browser's default radio button */
+            .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            }
+
+            /* Create a custom radio button */
+            .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            border:1px solid #FFF;
+            border-radius: 50%;
+            }
+
+            /* On mouse-over, add a grey background color */
+            .container:hover input ~ .checkmark {
+            background-color: #ccc;
+            }
+
+            /* When the radio button is checked, add a blue background */
+            .container input:checked ~ .checkmark {
+            background-color: #52fe6f;
+            }
+
+            /* Create the indicator (the dot/circle - hidden when not checked) */
+            .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+            }
+
+            /* Show the indicator (dot/circle) when checked */
+            .container input:checked ~ .checkmark:after {
+            display: block;
+            }
+
+        .edit-icon{
+            padding: 5px 20px;
+            font-size: 24px;
+            color: #52fe6f;
+        }
+        .profile-block{
+            padding: 0 40px ;
+            ion-row{
+                margin: 20px auto;
+            }
+            ion-item{
+                --border-color: #ffffffc4;
+                color: #52fe6f;
+                --background:transparent;
+                margin: 10px auto;
+            }
+            ion-input{
+                color: #FFF;
+            }
+            .save-btn{
+                width: 120px;
+                --border-radius:0;
+                --border-color:#52fe6f;
+                --color: #52fe6f;
+            }
+            .profile-label{
+                font-size: 12px;
+                color: #52fe6f;
+            }
+            .profile-text{
+                color: #FFF;
+                font-size: 14px;
+            }
+            span ion-input{
+                border-bottom: 1px solid;
+                --border-color: #ffffffc4;
+                --background:transparent;
+            }
+        }
+    }
+}

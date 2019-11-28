@@ -1,0 +1,39 @@
+<ion-content class="ionic-home-page-section">
+  <div class="back-img">
+    <app-header></app-header>
+    <ion-grid no-padding class="position-fixed">
+      <ion-row class="top-header-news" justify-content-center>
+        News
+      </ion-row>
+    </ion-grid>
+    <ion-slides pager="false" [options]="slideOpts">
+      <ion-slide *ngFor="let item of newsData;">
+        <div class="opacity-0">
+          <ion-grid no-padding>
+            <ion-row class="banner-news" justify-content-center>
+              <img [src]="imageUrl+item.attachmentUrl" width="100%">
+            </ion-row>
+          </ion-grid>
+          <ion-card class="margin-small">
+            <ion-row class="text-success">
+              <ion-col class="ion-text-left">
+                {{item.newsDate | date: 'dd-MMM-yyyy hh:mm'}}
+              </ion-col>
+              <ion-col class="ion-text-end">
+                <ion-icon name="share"></ion-icon>
+              </ion-col>
+            </ion-row>
+            <ion-card-content class="card-content bg-white-trans margin-small" no-padding>
+              <div class="card-title">
+                {{item.newsTitle}}
+              </div>
+              <div class="card-description">
+                {{item.description}}
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

@@ -1,0 +1,18 @@
+header 
+2e0438
+1e1f38
+
+footer
+00997a
+
+leader board heading bg
+
+37003c
+19002f
+
+
+FONT FAMILY
+
+leader bord:- 
+opensans 
+Maiandra GD

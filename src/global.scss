@@ -1,0 +1,169 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+:root {
+    --ion-color-green: #00997a;
+    --border-radius-green: 5px;
+    --ion-color-green-rgb: 255, 215, 0;
+    --ion-color-green-contrast: #fff;
+    --ion-color-green-contrast-rgb: 0, 0, 0;
+    --ion-color-green-shade: #00997a;
+    --ion-color-green-tint: #00997a;
+    --ion-color-facebook: #3b5998;
+    --border-radius-facebook: 5px;
+    --ion-color-facebook-rgb: 255, 215, 0;
+    --ion-color-facebook-contrast: #fff;
+    --ion-color-facebook-contrast-rgb: 0, 0, 0;
+    --ion-color-facebook-shade: #3b5998;
+    --ion-color-facebook-tint: #3b5998;
+    --ion-color-google: #fb2a00;
+    --border-radius-google: 5px;
+    --ion-color-google-rgb: 255, 215, 0;
+    --ion-color-google-contrast: #fff;
+    --ion-color-google-contrast-rgb: 0, 0, 0;
+    --ion-color-google-shade: #fb2a00;
+    --ion-color-google-tint: #fb2a00;
+}
+.ion-color-green {
+    --border-radius: var(--border-radius-green) !important;
+    --ion-color-base: var(--ion-color-green) !important;
+    --ion-color-base-rgb: var(--ion-color-green-rgb) !important;
+    --ion-color-contrast: var(--ion-color-green-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-green-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-green-shade) !important;
+    --ion-color-tint: var(--ion-color-green-tint) !important;
+}
+.ion-color-facebook{
+    --border-radius: var(--border-radius-facebook) !important;
+    --ion-color-base: var(--ion-color-facebook) !important;
+    --ion-color-base-rgb: var(--ion-color-facebook-rgb) !important;
+    --ion-color-contrast: var(--ion-color-facebook-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-facebook-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-facebook-shade) !important;
+    --ion-color-tint: var(--ion-color-facebook-tint) !important;
+}
+.ion-color-google{
+    --border-radius: var(--border-radius-google) !important; 
+    --ion-color-base: var(--ion-color-google) !important;
+    --ion-color-base-rgb: var(--ion-color-google-rgb) !important;
+    --ion-color-contrast: var(--ion-color-google-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-google-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-google-shade) !important;
+    --ion-color-tint: var(--ion-color-google-tint) !important;
+}
+.toolbar-container{
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+}
+.m-0{
+    margin: 0 !important;
+}
+.m-l-1{
+    margin-left: 10px;
+}
+.m-t-20{
+    margin-top: 20px;
+}
+.m-t-1{
+    margin-top: 10px;
+}
+.m-b-1{
+    margin-bottom: 10px;
+}
+.mb-4{
+margin-bottom: 4px;
+}
+.text-s-12{
+    font-size: 12px;
+}
+.text-red{
+    color: red;
+}
+.text-success{
+    color: #52fe6f;
+}
+.text-white{
+    color: #FFF !important;
+}
+.bg-transparent{
+    background: transparent;
+}
+.font-s-28{
+    font-size: 28px;
+}
+.font-s-8{
+    font-size: 8px;
+    font-weight: bold;
+}
+.bg-transparent-white{
+    // background: #ffffff1f;
+}
+.bg-transparent-white .item-native{
+    padding: 0 !important;
+}
+.round-5
+{
+    border-radius:5px!important;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.text-info{
+    color: cyan;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+.text-center{
+    text-align: center;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+.modal-wrapper{
+ --max-width:60%;
+ --max-height:33%   
+}
+.text-dacoration-none{
+    text-decoration: none !important;
+}
+.text-italic{
+    font-style: italic;
+}
+.footer{
+    z-index: 1;
+    padding: 5px;
+    text-align: center;
+    color: #000000;
+    font-size: 14px;
+    background-color: #52fe6f;
+}
+.chat-box {
+    margin-bottom: 30px;
+}

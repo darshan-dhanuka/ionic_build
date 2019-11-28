@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "230833787106",
+    "firebase_url": "https://hashtag-poker.firebaseio.com",
+    "project_id": "hashtag-poker",
+    "storage_bucket": "hashtag-poker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230833787106:android:b30ce1e9c0d9571e0c8ebb",
+        "android_client_info": {
+          "package_name": "com.hashtagpoker.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "230833787106-5e8tjcj3pk5id63psk44gl5d3r8qd1nv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hashtagpoker.app",
+            "certificate_hash": "4b5ac4d1491b2e12182750e835223ae76aa489e7"
+          }
+        },
+        {
+          "client_id": "230833787106-qe5bv5e2lobafhim0bhpqh1925ve5s97.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-89RvrnM75hUyYVSonXdR_excGawyOpA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "230833787106-qe5bv5e2lobafhim0bhpqh1925ve5s97.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

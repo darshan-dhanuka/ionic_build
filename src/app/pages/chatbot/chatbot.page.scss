@@ -1,0 +1,144 @@
+.padding-5{
+    padding: 5px;
+}
+ion-content.ionic-chatbot-page-section {
+    height: 100vh;
+    .back-img{
+        width: 100%;
+        height: auto;
+        position: relative;
+        background: url('../../../assets/images/bg.png') center center no-repeat;
+        background-size: cover;
+        .opacity-0{
+            padding: 30px 15px;
+            position: relative;
+            z-index: 2;
+            .back-icon{
+                font-size: 28px;
+                margin: 10px auto;
+                a{
+                    color: #52ff6f;
+                }
+            }
+            ion-card-content{
+                padding: 0px;
+            }
+            ion-card-header{
+                padding: 5px 0;
+                --color: #FFF;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                background-color: #262525;
+                ion-card-title{
+                    text-align: center;
+                    font-size: 16px !important;
+                }
+            }
+            .attach{
+                font-size: 22px;
+                ion-icon{
+                    margin: 5px 5px;
+                }
+            }
+            .user-img{
+                margin-right:5px ;
+            }
+            .send-btn{
+                --background: #52ff6f;
+                width:60%;
+                --padding:5px;
+                color:#262525;
+                --border-radius:50%;
+            }
+            .bg-white{
+                background: #FFF;
+            }
+            .message-container{
+                width: 100%;
+                display: inline-block;
+                .message.to {
+                     width: 90%;
+                    float: right;
+                    color: #FFF;
+                    border: 1px solid transparent;
+                    font-size: 12px;
+                    .text-align-right{
+                        text-align: right;
+                    }
+                    .display-col-reverse{
+                        display: flex;
+                        text-align: end;
+                        flex-direction: row-reverse;
+                    }
+                }
+                .user-send-time{
+                    position: relative;
+                    width: 110px;
+                    right: 68px;
+                }
+                .message.from {
+                    width: 100%;
+                    float: left;
+                    color: #FFF;
+                    border: 1px solid transparent;
+                    font-size: 12px;
+                }
+                span.sendtime {
+                    width: 100%;
+                    display: block;
+                    text-align: right;
+                    font-size: 10px;
+                    color: #52ff6f;
+                }
+            }
+            .border-2-green{
+                 border:2px solid #52ff6f;
+                 padding: 5px 0;
+                 ion-col{
+                     border: none;
+                 }
+            }
+            .input-text-message{
+                width: 100%;
+                border: none;
+                line-height: 2px;
+                padding: 8px;
+                :focus{
+                    border-color: #52ff6f;
+                    border:1px solid #52ff6f !important;
+                }
+            }
+            .send-box{
+                --background-activated:#12ca31 !important;
+                --background-focused:#12ca31 !important;
+                height: 30px;
+                background: #FFF;
+            }
+            .chat-body {
+                height: 325px;
+                width: 100%;
+                overflow: auto;
+                border: 1px solid #ddd;
+                padding: 5px;
+            }
+            
+            .card-title-description{
+                background: #FFF;
+                padding: 5px;
+                font-size: 14px;
+                color: #000;
+            }
+        }      
+        &:after {
+            content: "";
+            display: block;
+            position: fixed;
+            padding: 100px 0;
+            width: 100%;
+            height: 100%;
+            top: 10px;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0);
+        }
+    }
+}

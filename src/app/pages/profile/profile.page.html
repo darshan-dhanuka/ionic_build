@@ -1,0 +1,141 @@
+<ion-content class="ionic-home-page-section">
+  <div class="back-img">
+    <app-header></app-header>
+    <form [formGroup]="editProfileForm">
+      <div class="opacity-0">
+        <ion-grid no-padding>
+          <ion-row class="profile-header">
+            <ion-row justify-content-center>
+              <div class="circle">
+                <img class="profile-pic" [src]="getImageUrl(loginUser?.profile)" width="20%">
+              </div>
+              <div *ngIf="isEdit == true" class="p-image">
+                <input class="file-upload" type="file" accept="image/*" #file />
+                <i class="fa fa-plus upload-button" (click)="file.click()"></i>
+              </div>
+            </ion-row>
+            <ion-text color="light">
+              <div text-center>
+                {{loginUser?.fullName}}
+                <p no-margin class="text-italic text-success">New York</p>
+              </div>
+            </ion-text>
+          </ion-row>
+          <ion-segment no-padding (ionChange)="segmentChanged($event)" [value]="selectedSagment">
+            <ion-row no-padding>
+              <ion-col size="6" no-padding>
+                <ion-segment-button no-padding value="persnolinformation">
+                  <ion-label>Persnol Information</ion-label>
+                </ion-segment-button>
+              </ion-col>
+              <ion-col size="6" no-padding>
+                <ion-segment-button no-padding value="changepassword">
+                  <ion-label>Change Password <ion-icon name="create"></ion-icon>
+                  </ion-label>
+                </ion-segment-button>
+              </ion-col>
+            </ion-row>
+          </ion-segment>
+        </ion-grid>
+      </div>
+      <div *ngIf="selectedSagment == 'persnolinformation'">
+        <ion-row justify-content-end class="edit-icon">
+          <ion-icon (click)="isEditTrue()" name="create"></ion-icon>
+        </ion-row>
+        <div class="profile-block">
+          <ion-row no-pading>
+            <ion-text class="text-success">
+              <p no-margin class="profile-label">Hashtag ID</p>
+              <p no-margin class="profile-text">{{loginUserProfile?.hashtag_id}}</p>
+            </ion-text>
+          </ion-row>
+          <ion-row no-pading>
+            <ion-text class="text-success">
+              <p no-margin class="profile-label">Email</p>
+              <p no-margin class="profile-text">{{loginUserProfile?.email}}</p>
+            </ion-text>
+          </ion-row>
+          <ion-row no-pading>
+            <ion-text class="text-success">
+              <p no-margin class="profile-label">Mobile</p>
+              <span *ngIf="isEdit == true">
+                <ion-input type="text" formControlName="contact" name="contact" value="+91 9990001112"></ion-input>
+                <div *ngFor="let validation of validationMessages.contact">
+                  <div *ngIf="submitted && f.contact.errors" class="invalid-feedback">
+                    <div class="error-message text-red " *ngIf="f.contact.errors[validation.type]">
+                      {{ validation.message }}</div>
+                  </div>
+                </div>
+              </span>
+              <p *ngIf="isEdit == false" no-margin class="profile-text">{{loginUserProfile?.mobile ?
+                loginUserProfile?.mobile : '-'}}</p>
+            </ion-text>
+          </ion-row>
+          <ion-row no-padding>
+            <ion-text class="text-success">
+              <p no-margin class="profile-label mb-4">Gender</p>
+              <span *ngIf="isEdit == true">
+                <ion-row no-margin no-padding color="light">
+                  <label class="container">Male
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  &nbsp;&nbsp;&nbsp;
+                  <label class="container">Female
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                </ion-row>
+              </span>
+              <p *ngIf="isEdit == false" no-margin class="profile-text">{{loginUserProfile?.gender ?
+                loginUserProfile?.gender: '-'}}</p>
+            </ion-text>
+          </ion-row>
+          <ion-row no-padding>
+            <ion-text class="text-success">
+              <p no-margin class="profile-label">Address</p>
+              <span *ngIf="isEdit == true">
+                <ion-input type="text" formControlName="address" name="address" value="Indore MP"></ion-input>
+                <div *ngFor="let validation of validationMessages.address">
+                  <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                    <div class="error-message text-red " *ngIf="f.address.errors[validation.type]">
+                      {{ validation.message }}</div>
+                  </div>
+                </div>
+              </span>
+              <p *ngIf="isEdit == false" no-margin class="profile-text">{{loginUserProfile?.address ?
+                loginUserProfile?.address : '-'}}</p>
+            </ion-text>
+          </ion-row>
+          <ion-row *ngIf="isEdit == true" no-padding justify-content-center>
+            <ion-button class="save-btn" fill="outline" type="submit" (click)="submitProfile(editProfileForm)">
+              Save
+            </ion-button>
+          </ion-row>
+        </div>
+      </div>
+    </form>
+    <div *ngIf="selectedSagment == 'changepassword'">
+      <div class="profile-block">
+        <form>
+          <ion-row></ion-row>
+          <ion-item>
+            <ion-label position="stacked">Current Password</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">New Password</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Confirm Password</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-row justify-content-center>
+            <ion-button class="save-btn" fill="outline">Save</ion-button>
+          </ion-row>
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-content>

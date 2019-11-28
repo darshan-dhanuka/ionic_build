@@ -1,0 +1,74 @@
+<ion-content class="ionic-ott-single-page-section">
+  <div class="back-img">
+    <app-header></app-header>
+    <div class="opacity-0">
+      <ion-grid no-padding>
+        <ion-row no-padding class="ott-video-banner" justify-content-center>
+          <video width="400" controls>
+            <source src="../../../assets/video/test.mp4" type="video/mp4">
+            <source src="../../../assets/video/test.mp4" type="video/ogg">
+            Your browser does not support HTML5 video.
+          </video>
+        </ion-row>
+        <ion-row class="p-l-r-10">
+          <ion-col class="icons text-success" size="8">
+            <ion-icon name="thumbs-up"></ion-icon>
+          </ion-col>
+          <ion-col class="icons text-success text-right" size="4">
+            <ion-icon class="mr-2" name="download"></ion-icon>
+            <ion-icon class="ml-2" name="bookmark"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row class="ott-single-section p-l-r-10">
+          <div class="text-uppercase title text-white">
+            LOREM IPSUM TEST TEXT
+          </div>
+          <div class="descriotion text-uppercase text-white">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </div>
+        </ion-row>
+      </ion-grid>
+      <ion-grid class="ott-single-section" no-padding>
+        <div no-padding class="ott-single-suggestion" justify-content-start>
+          <div padding="4" class="text-success suggestion-title">
+            Suggestion
+          </div>
+          <ion-row class="suggestion-row">
+            <ion-col size="4">
+              <img src="../../../assets/images/ott/event1.png" width="100%">
+              Event Title here
+            </ion-col>
+            <ion-col size="4">
+              <img src="../../../assets/images/ott/event2.png" width="100%">
+              Event Title here
+            </ion-col>
+            <ion-col size="4">
+              <img src="../../../assets/images/ott/event3.png" width="100%">
+              Event Title here
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-grid>
+    </div>
+    <ion-footer no-padding>
+      <ion-grid class="comment  p-l-r-20" no-padding>
+        <ion-row no-padding class="border-2-green">
+          <ion-col size="10" no-padding>
+            <div class="send-box" no-padding>
+              <input class="input-text-message" placeholder="Comment" />
+            </div>
+          </ion-col>
+          <ion-col size="2" no-padding>
+            <ion-row no-padding justify-content-center>
+              <ion-button no-padding class="send-btn" size="small">
+                <ion-icon no-padding name="send"></ion-icon>
+              </ion-button>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-footer>
+  </div>
+</ion-content>

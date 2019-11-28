@@ -1,0 +1,53 @@
+.new-background-color{
+    --background: #240031;
+}
+.p-40{
+    padding: 40px;
+}
+.m-4{
+    margin: 4px !important;
+}
+.mb-6{
+    margin-bottom: 6px !important;
+}
+.mt-34{
+    margin-top: 34px !important;
+}
+.text-darkgreen{
+    color: #34B2A3;
+    font-size: 14px;
+    text-align: center;
+}
+.background-transparent{
+    background: transparent !important;
+}
+.ion-item,.ion-list{
+    --background: transparent !important;
+    color: #FFF !important;
+    font-size: 13px !important;
+}
+ion-icon{
+    color:#00997a;
+}
+.ion-content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    --background: url('../assets/images/bg.png') center center no-repeat;
+    background-size: cover;
+    .opacity-0{
+        position: relative;
+        z-index: 2;
+    }
+    &:after {
+        content: "";
+        display: block;
+        position: fixed;
+        padding: 100px 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}

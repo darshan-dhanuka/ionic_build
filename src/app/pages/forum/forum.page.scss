@@ -1,0 +1,101 @@
+ion-content.ionic-home-page-section {
+    height: 100vh;
+    .back-img{
+            width: 100%;
+            height: auto;
+            background: url('../../../assets/images/bg.png') center center no-repeat;
+            background-size: cover;
+            padding-bottom: 100px;
+        .opacity-0{
+            position: relative;
+            z-index: 1;
+            .forum{ 
+                z-index: -1;
+                padding: 20px;
+                position: relative;
+                top:10px;
+                ion-list{
+                    padding:0;
+                    background: transparent;
+                    ion-badge{
+                        color: #000;
+                        border-radius: 25px;
+                        --ion-color-base:#52ff6f !important;
+                    }
+                }
+                
+                .border-radius-top-right-0{
+                    border-top-right-radius:0px !important;
+                }
+                .border-radius-top-left-0{
+                    border-top-left-radius:0px !important;
+                }
+                .hash-background{
+                    padding: 20px 0;
+                    background: #52ff6f;
+                    color: #FFF;
+                }
+                .text-green{
+                    color: #52ff6f;
+                }
+                .forum-header{
+                    padding: 5px;
+                    color: #FFF;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    background-color: #262525;
+                    font-size: 16px !important;
+                }
+                .vertical-align-content{
+                    display: flex!important;
+                    align-content: center!important;
+                    align-items: center!important;
+                }
+                .forum-tr{
+                    color: #000;
+                    font-size: 14px;
+                    height: 100%;
+                    align-items: center;
+                }
+                .tr-last{
+                    color: #FFF;
+                    font-size: 16px;
+                }
+                .padding-2{
+                    padding: 2px 4px;
+                }
+                .margin-t-b-1{
+                    margin: 1px auto;
+                }
+                .bg-trans-white{
+                    background: #a8a8a82e;
+                }
+            }
+        }      
+        &:after {
+            content: "";
+            display: block;
+            position: fixed;
+            padding: 100px 0;
+            width: 100%;
+            height: 100%;
+            top: 10px;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        .top-header-forum{
+            padding: 28px 0 0 0;
+            z-index: 1;
+            color: #FFF;
+            font-size: 16px;
+            background-color: transparent;
+        }
+        .banner-news{
+            width: 100%;
+        }
+        .position-fixed{
+            position: fixed;
+            width: 100%;
+        }
+    }
+}

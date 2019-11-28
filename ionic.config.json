@@ -1,0 +1,7 @@
+{
+  "name": "hashtag-poker",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
